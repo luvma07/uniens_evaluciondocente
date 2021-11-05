@@ -1,0 +1,139 @@
+/*
+.box_login{
+    background-image: url(../img/UniEns_wallpaper.png);
+    width: 100%;
+    height: 900px; 
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+*/
+
+.body_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: aqua;*/
+    background-image: url(../img/UniEns_wallpaper.png);
+    height: 100%; 
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.conteiner_table_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+    opacity: 0.9;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    /*background-color:  #f4f6f6 ;*/
+    width: 80%;    
+    height: 80%;
+}
+
+.importante {
+    grid-row-start: 1; 
+    grid-row-end: 2; 
+}
+
+.tabla_menu {
+    /*background-color: tomato;*/
+    background-color:  #f4f6f6 ;
+    grid-row-start: 2; 
+    grid-row-end: 3; 
+    width: 100%;    
+    height: 100%;
+}
+
+.container_boton_cerrar_sesion {
+    /*background-color: violet;*/
+    grid-row-start: 3; 
+    grid-row-end: 4; 
+    width: 100%;    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton_cerrar_sesion {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #12385B;
+    background-color: seagreen;*/
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 32px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .body_menu  {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .conteiner_table_menu {
+        width: 90%;
+        /*height: 90%;*/
+    }
+
+    .menu {
+        grid-template-rows: 1fr 0.75fr 0.25fr;
+        width: 90%;    
+        /*height: 80%;*/
+        padding-top: 10x;
+        padding-bottom: 10pxpx;
+    }
+
+    /*
+    .tabla_menu {
+        font-size: 16px; 
+    }
+    */
+
+    .th-hidden {
+        visibility: collapse;
+        font-size: 0px;
+    }
+
+    /*
+    .body_menu  {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .container_table_menu  {
+        width: 95%;
+        height: 95%;
+    }
+
+    .content_cuestionario {
+        width: 80%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+*/
+}
