@@ -39,7 +39,7 @@
                                     echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
                                     </tr>';
                                 } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionario.php">No ha sido respondido</a></td>
+                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD1.php">No ha sido respondido</a></td>
                                     </tr>';
                                 }                
                     }
@@ -59,7 +59,7 @@
                                     echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
                                     </tr>';
                                 } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionario2.php">No ha sido respondido</a></td>
+                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD2.php">No ha sido respondido</a></td>
                                     </tr>';
                                 }                
                     }
@@ -79,10 +79,54 @@
                                     echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
                                     </tr>';
                                 } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionario3.php">No ha sido respondido</a></td>
+                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD3.php">No ha sido respondido</a></td>
                                     </tr>';
                                 }                
                     }
+
+                    //AGRE 
+                    /*
+                    if(isset($_COOKIE["curso_4"])){
+                        $no_de_cuestionario = $no_de_cuestionario + 1;
+                        $curso_4 = $_COOKIE["curso_4"];
+                        $docente_curso_4 = $_COOKIE["docente_curso4"];
+                        $status_curso_4 = $_COOKIE["status_curso4"];
+
+                        echo '<tr>
+                                <td align="center">'.$no_de_cuestionario.'</td>
+                                <td class="th-hidden" align="center">'.$curso_4.'</td>
+                                <td class="th-hidden" align="center">'.$docente_curso_4.'</td>';                
+
+                                if ($status_curso_4 == 1) {
+                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
+                                    </tr>';
+                                } else {
+                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD4.php">No ha sido respondido</a></td>
+                                    </tr>';
+                                }                
+                    }
+
+                    if(isset($_COOKIE["curso_5"])){
+                        $no_de_cuestionario = $no_de_cuestionario + 1;
+                        $curso_5 = $_COOKIE["curso_5"];
+                        $docente_curso_5 = $_COOKIE["docente_curso5"];
+                        $status_curso_5 = $_COOKIE["status_curso5"];
+
+                        echo '<tr>
+                                <td align="center">'.$no_de_cuestionario.'</td>
+                                <td class="th-hidden" align="center">'.$curso_5.'</td>
+                                <td class="th-hidden" align="center">'.$docente_curso_5.'</td>';                
+
+                                if ($status_curso_5 == 1) {
+                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
+                                    </tr>';
+                                } else {
+                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD5.php">No ha sido respondido</a></td>
+                                    </tr>';
+                                }                
+                    }
+                    */
+                    //
                     
                     $no_de_cuestionario = $no_de_cuestionario + 1;
                     $status_servicios = $_COOKIE["status_servicios"];
@@ -95,10 +139,10 @@
                                 echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
                                 </tr>';
                             } else {
-                                echo '<td align="center"><a href="controllers/seleccionar_cuestionario4.php">No ha sido respondido</a></td>
+                                echo '<td align="center"><a href="controllers/seleccionar_cuestionarioS.php">No ha sido respondido</a></td>
                                 </tr>';
                             } 
-
+/*
                     $no_de_cuestionario = $no_de_cuestionario + 1;
                     $status_instalaciones = $_COOKIE["status_instalaciones"];
 
@@ -110,10 +154,10 @@
                                 echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
                                 </tr>';
                             } else {
-                                echo '<td align="center"><a href="controllers/seleccionar_cuestionario5.php">No ha sido respondido</a></td>
+                                echo '<td align="center"><a href="controllers/seleccionar_cuestionarioI.php">No ha sido respondido</a></td>
                                 </tr>';
                             }                    
-
+*/
                 ?>
 
             </table>

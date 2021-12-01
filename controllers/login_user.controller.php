@@ -28,7 +28,7 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
     $stmt -> execute();
     $result = $stmt -> fetch();
 
-    var_dump($result);
+    //var_dump($result);
 
     echo '<br>';
     echo '<br>';  
@@ -46,7 +46,9 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
         $stmt_curso1 -> bindParam(":$item", $id_curso1, PDO::PARAM_STR);
         $stmt_curso1 -> execute();
         $result_curso_1 = $stmt_curso1 -> fetch();
-        var_dump($result_curso_1);
+        //var_dump($result_curso_1);
+        //echo '<br>';
+        //echo '<br>'; 
 
         $id_curso2 = $result["id_curso_2"];
 
@@ -54,7 +56,9 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
         $stmt_curso2 -> bindParam(":$item", $id_curso2, PDO::PARAM_STR);
         $stmt_curso2 -> execute();
         $result_curso_2 = $stmt_curso2 -> fetch();
-        var_dump($result_curso_2);
+        //var_dump($result_curso_2);
+        //echo '<br>';
+        //echo '<br>'; 
 
         $id_curso3 = $result["id_curso_3"]; 
 
@@ -62,8 +66,30 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
         $stmt_curso3 -> bindParam(":$item", $id_curso3, PDO::PARAM_STR);
         $stmt_curso3 -> execute();
         $result_curso_3 = $stmt_curso3 -> fetch();
-        var_dump($result_curso_3);
+        //var_dump($result_curso_3);
+        //echo '<br>';
+        //echo '<br>'; 
+/*
+        $id_curso4 = $result["id_curso_4"]; 
 
+        $stmt_curso4 = $conectar -> prepare("SELECT * FROM $table WHERE $item = :$item");
+        $stmt_curso4 -> bindParam(":$item", $id_curso4, PDO::PARAM_STR);
+        $stmt_curso4 -> execute();
+        $result_curso_4 = $stmt_curso4 -> fetch();
+        //var_dump($result_curso_4);
+        //echo '<br>';
+        //echo '<br>'; 
+
+        $id_curso5 = $result["id_curso_5"]; 
+
+        $stmt_curso5 = $conectar -> prepare("SELECT * FROM $table WHERE $item = :$item");
+        $stmt_curso5 -> bindParam(":$item", $id_curso5, PDO::PARAM_STR);
+        $stmt_curso5 -> execute();
+        $result_curso_5 = $stmt_curso5 -> fetch();
+        //var_dump($result_curso_5);
+        //echo '<br>';
+        //echo '<br>'; 
+*/
         $cookie1 = SED::encryption($valor_user);
         $cookie2 = SED::encryption($valor_pass);
 
@@ -87,10 +113,18 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
         setcookie("curso_3", $result_curso_3["curso"], time() + 60 * 30, "/EvaluacionDocente");
         setcookie("docente_curso3", $result_curso_3["docente"], time() + 60 * 30, "/EvaluacionDocente");
         setcookie("status_curso3", $result["status_curso3"], time() + 60 * 30, "/EvaluacionDocente");
+/*
+        setcookie("curso_4", $result_curso_4["curso"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("docente_curso4", $result_curso_4["docente"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("status_curso4", $result["status_curso4"], time() + 60 * 30, "/EvaluacionDocente");
 
+        setcookie("curso_5", $result_curso_5["curso"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("docente_curso5", $result_curso_5["docente"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("status_curso5", $result["status_curso5"], time() + 60 * 30, "/EvaluacionDocente");
+*/
         setcookie("status_servicios", $result["status_servicios"], time() + 60 * 30, "/EvaluacionDocente");
 
-        setcookie("status_instalaciones", $result["status_instalaciones"], time() + 60 * 30, "/EvaluacionDocente");  
+        //setcookie("status_instalaciones", $result["status_instalaciones"], time() + 60 * 30, "/EvaluacionDocente");  
 
         header("Location:../index.php");
         //echo 'menuuu';

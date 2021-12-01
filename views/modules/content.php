@@ -57,10 +57,10 @@
                             $cuestionario = @file_get_contents("Cuestionario_Servicio.json");
                             echo '<form class="cuestionario" action="controllers/enviar_db_servicios.php" method="post">';
                             break;
-                        case 2:
-                            echo '<h1>Evaluacion Administrativos-Docente</h1>';
-                            $cuestionario = @file_get_contents("Cuestionario_AdministrativosDocente.json");
-                            echo '<form class="cuestionario" action="controllers/enviar_db_instalaciones.php" method="post">';
+                        //case 2:
+                        //    echo '<h1>Evaluacion Administrativos-Docente</h1>';
+                        //    $cuestionario = @file_get_contents("Cuestionario_AdministrativosDocente.json");
+                        //    echo '<form class="cuestionario" action="controllers/enviar_db_instalaciones.php" method="post">';
                             break; 
                     }
                     
