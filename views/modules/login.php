@@ -26,11 +26,11 @@
             
                 <form class="dates" action="controllers/login_user.controller.php" method="POST">
                     <div class="date">
-                        <label class="label_login" for="name">Nombre de usuario</label>
+                        <label class="label_login" for="name">Usuario UNIENS</label>
                         <input class="input_login" type="text" name="log_user" required/>
                     </div>
                     <div class="date">
-                        <label class="label_login" for="password">Contraseña Google de UniEns</label>
+                        <label class="label_login" for="password">Contraseña UNIENS </label>
                         <input class="input_login" type="password" name="log_pass" required/>
                     </div>
                     <input class="boton_login" type="submit" value="Enviar" name="login" maxlength="21">
