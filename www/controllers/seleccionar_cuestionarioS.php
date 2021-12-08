@@ -9,10 +9,10 @@
     /////////////////////////////////////
 
     $pagina = 2;
-    setcookie("paginacion", $pagina, time() + 60 * 30, "/EvaluacionDocente");
+    setcookie("paginacion", $pagina, time() + 60 * 30, $ruta_cookie);
 
     $cuestionario = 1;
-    setcookie("cuestionario", $cuestionario, time() + 60 * 30, "/EvaluacionDocente");
+    setcookie("cuestionario", $cuestionario, time() + 60 * 30, $ruta_cookie);
 
     //if ($cuestionario == 0) {
     //    $cuestionario_curso = 3;
