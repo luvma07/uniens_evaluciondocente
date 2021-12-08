@@ -1,12 +1,17 @@
 {
-    "Pregunta_1": "El docente se presenta puntual a clases presenciales/virtuales.",
-    "Pregunta_2": "Las sesiones de clase son completadas en tiempo y forma.",
-    "Pregunta_3": "El docente cumple con entrega oportuna de documentos a Coordinación Académica.",
-    "Pregunta_4": "El docente cumple en tiempo y forma con la entrega de formatos, documentos para el departamento de Servicios Escolares, (calificaciones, reportes de inasistencias, lista de extraordinarios.)",
-    "Pregunta_5": "El docente participa activamente en las reuniones académicas de la Universidad (Juntas de inicio, juntas de cierre, seguimiento a estudiantes, etc.).",
-    "Pregunta_6": "El docente participa en los diferentes cuerpos colegiados, para la actualización en la formación de estudiantes (Academias).",
-    "Pregunta_7": "El docente se integra a los diferentes eventos institucionales y muestra interés en la participación de los mismos.",
-    "Pregunta_8": "El docente colabora con fortalecer la experiencia educativa a través de actividades extracurriculares con los estudiantes de la Universidad, generando sentido de pertenencia.",
-    "Pregunta_9": "El docente hace uso de las nuevas tecnologías, para brindar herramientas que faciliten el acceso a la educación.",
-    "Pregunta_10": "Respeta los códigos de vestimenta y comportamientos profesionales de la Universidad."
+    "Pregunta_1": "Los objetivos de la materia son claramente definidos.",
+    "Pregunta_2": "El docente ha definido en su planeación los formas de evaluación de manera clara.",
+    "Pregunta_3": "La planeación del docente cuenta con proyecto o trabajo final que da sentido a la materia.",
+    "Pregunta_4": "Las sesiones de clase son acordes al tiempo establecido en el horario de clases (Duración horas-clase).)",
+    "Pregunta_5": "Se facilita el acceso a diferentes fuentes de información.",
+    "Pregunta_6": "Se utilizan técnicas para ayudar a la comprensión de los conceptos (ejemplos, material audiovisual, analogías etc.).",
+    "Pregunta_7": "Se utilizan recursos materiales y tecnológicos variados para hacer las tareas y actividades comprensibles y significativas.",
+    "Pregunta_8": "El docente Favorece el proceso de reflexión sobre el propio aprendizaje.",
+    "Pregunta_9": "Se promueve la responsabilidad tanto del trabajo individual, como el trabajo en equipo, en el desarrollo de las diferentes actividades.",
+    "Pregunta_10": "Las sesiones de clase se dan bajo un marco de valores y convivencia armoniosa.",
+    "Pregunta_11": "La revisión de las actividades propuestas por el docente se dan de manera oportuna.",
+    "Pregunta_12": "El docente brinda la orientación y retroalimentación sobre las actividades planteadas.",
+    "Pregunta_13": "El docente muestra siempre disponibilidad para atender dudas y consultas que se presentan durante la clase.",
+    "Pregunta_14": "El docente inicia y termina la sesión de clase en tiempo y forma.",
+    "Pregunta_15": "Se promueve la puntualidad del grupo, para presentarse a las sesiones de clase y en las entregas de actividades."
 }
