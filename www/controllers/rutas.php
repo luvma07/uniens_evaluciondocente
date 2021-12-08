@@ -8,7 +8,7 @@ class Rutas{
 
 	static public function ruta_cookies(){
 
-		$ruta = "/uniens_evaluciondocente";
+		$ruta = "/";
 
         return $ruta;
 

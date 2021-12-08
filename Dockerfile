@@ -48,6 +48,7 @@ COPY www /var/www/html
 COPY connection.php /var/www/html/controllers/connection.php
 COPY php.ini-production /usr/local/etc/php/php.ini
 
+RUN mkdir cookies
 RUN chown www-data:www-data -R /var/www/html/
 COPY .htaccess /var/www/html/.htaccess
 
