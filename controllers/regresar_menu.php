@@ -3,8 +3,16 @@
     require_once 'connection.php';
     require_once 'scrip_EncodeDecode.php';
 
+    /////////////////////////////////////
+    require_once "rutas.php";
+
+    $ruta_cookie = new Rutas; 
+    $ruta_cookie = Rutas::ruta_cookies();
+    var_dump($ruta_cookie);
+    /////////////////////////////////////
+
     $pagina = 1;
-    setcookie("paginacion", $pagina, time() + 60 * 30, "/EvaluacionDocente");
+    setcookie("paginacion", $pagina, time() + 60 * 30, $ruta_cookie);
 
     //echo 'Hola';
 
@@ -12,7 +20,6 @@
         $cookie1 = $_COOKIE['cookie1'];
         $valor_user = SED::decryption($cookie1);
     }
-   
     if (isset($_COOKIE['cookie2'])) {
         $cookie2 = $_COOKIE['cookie2'];
         $valor_pass = SED::decryption($cookie2);
@@ -32,11 +39,11 @@
 
     var_dump($result);
 
-    setcookie("status_curso1", $result["status_curso1"], time() + 60 * 30, "/EvaluacionDocente");
-    setcookie("status_curso2", $result["status_curso2"], time() + 60 * 30, "/EvaluacionDocente");
-    setcookie("status_curso3", $result["status_curso3"], time() + 60 * 30, "/EvaluacionDocente");
-    setcookie("status_servicios", $result["status_servicios"], time() + 60 * 30, "/EvaluacionDocente");
-    setcookie("status_instalaciones", $result["status_instalaciones"], time() + 60 * 30, "/EvaluacionDocente");
+    setcookie("status_curso1", $result["status_curso1"], time() + 60 * 30, $ruta_cookie);
+    setcookie("status_curso2", $result["status_curso2"], time() + 60 * 30, $ruta_cookie);
+    setcookie("status_curso3", $result["status_curso3"], time() + 60 * 30, $ruta_cookie);
+    setcookie("status_servicios", $result["status_servicios"], time() + 60 * 30, $ruta_cookie);
+    setcookie("status_instalaciones", $result["status_instalaciones"], time() + 60 * 30, $ruta_cookie);
 
     header("Location:../index.php");
 

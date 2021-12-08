@@ -95,24 +95,33 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
 
         $pagina = 1;
 
-        setcookie("paginacion", $pagina, time() + 60 * 30, "/EvaluacionDocente");
 
-        setcookie("cookie1", $cookie1, time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("cookie2", $cookie2, time() + 60 * 30, "/EvaluacionDocente");
+        /////////////////////////////////////
+        require_once "rutas.php";
 
-        setcookie("nombre_completo", $result["nombre_completo"], time() + 60 * 30, "/EvaluacionDocente");
+        $ruta_cookie = new Rutas; 
+        $ruta_cookie = Rutas::ruta_cookies();
+        var_dump($ruta_cookie);
+        /////////////////////////////////////
 
-        setcookie("curso_1", $result_curso_1["curso"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("docente_curso1", $result_curso_1["docente"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("status_curso1", $result["status_curso1"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("paginacion", $pagina, time() + 60 * 30, $ruta_cookie);
+
+        setcookie("cookie1", $cookie1, time() + 60 * 30, $ruta_cookie);
+        setcookie("cookie2", $cookie2, time() + 60 * 30, $ruta_cookie);
+
+        setcookie("nombre_completo", $result["nombre_completo"], time() + 60 * 30, $ruta_cookie);
+
+        setcookie("curso_1", $result_curso_1["curso"], time() + 60 * 30, $ruta_cookie);
+        setcookie("docente_curso1", $result_curso_1["docente"], time() + 60 * 30, $ruta_cookie);
+        setcookie("status_curso1", $result["status_curso1"], time() + 60 * 30, $ruta_cookie);
         
-        setcookie("curso_2", $result_curso_2["curso"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("docente_curso2", $result_curso_2["docente"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("status_curso2", $result["status_curso2"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("curso_2", $result_curso_2["curso"], time() + 60 * 30, $ruta_cookie);
+        setcookie("docente_curso2", $result_curso_2["docente"], time() + 60 * 30, $ruta_cookie);
+        setcookie("status_curso2", $result["status_curso2"], time() + 60 * 30, $ruta_cookie);
         
-        setcookie("curso_3", $result_curso_3["curso"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("docente_curso3", $result_curso_3["docente"], time() + 60 * 30, "/EvaluacionDocente");
-        setcookie("status_curso3", $result["status_curso3"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("curso_3", $result_curso_3["curso"], time() + 60 * 30, $ruta_cookie);
+        setcookie("docente_curso3", $result_curso_3["docente"], time() + 60 * 30, $ruta_cookie);
+        setcookie("status_curso3", $result["status_curso3"], time() + 60 * 30, $ruta_cookie);
 /*
         setcookie("curso_4", $result_curso_4["curso"], time() + 60 * 30, "/EvaluacionDocente");
         setcookie("docente_curso4", $result_curso_4["docente"], time() + 60 * 30, "/EvaluacionDocente");
@@ -122,7 +131,7 @@ if(isset($_POST["log_user"]) && isset($_POST["log_pass"])){
         setcookie("docente_curso5", $result_curso_5["docente"], time() + 60 * 30, "/EvaluacionDocente");
         setcookie("status_curso5", $result["status_curso5"], time() + 60 * 30, "/EvaluacionDocente");
 */
-        setcookie("status_servicios", $result["status_servicios"], time() + 60 * 30, "/EvaluacionDocente");
+        setcookie("status_servicios", $result["status_servicios"], time() + 60 * 30, $ruta_cookie);
 
         //setcookie("status_instalaciones", $result["status_instalaciones"], time() + 60 * 30, "/EvaluacionDocente");  
 
