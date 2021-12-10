@@ -74,10 +74,10 @@
                         echo'<p>
                             <b>'.$pregunta.':</b> '.$pregunta_contenido.' <br>
 
-                            <label><input type="radio" name="'.$pregunta.'" value="MI" required>Muy insatisfechos</label><br>
-                            <label><input type="radio" name="'.$pregunta.'" value="I" required>Insatisfechos</label><br>
-                            <label><input type="radio" name="'.$pregunta.'" value="S" required>Satisfechos</label><br>
-                            <label><input type="radio" name="'.$pregunta.'" value="MS" required>Muy satisfechos</label><br>
+                            <label><input type="radio" name="'.$pregunta.'" value="1" required>Nunca</label><br>
+                            <label><input type="radio" name="'.$pregunta.'" value="2" required>Alguna vez</label><br>
+                            <label><input type="radio" name="'.$pregunta.'" value="3" required>Casi siempre</label><br>
+                            <label><input type="radio" name="'.$pregunta.'" value="4" required>Siempre</label><br>
                         </p>';
 
                     }
