@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  app:
+    image: uniens_evaluciondocente:1.0.0
+    container_name: evaluacion-app
+    ports:
+      - 8001:80
+    environment:
+      DB_HOST: db
+      DB_DB: evaluacion
+      DB_USER: eval-user
+      DB_PASS: 3v4lu4c10n
+    volumes:
+      - ./www:/var/www/html/
+      - ./connection.php:/var/www/html/controllers/connection.php
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.3
+    container_name: evaluacion-db
+    ports:
+      - 3006:3006
+    environment:
+      MARIADB_DATABASE: evaluacion
+      MARIADB_USER: eval-user
+      MARIADB_PASSWORD: 3v4lu4c10n
+      MARIADB_ROOT_PASSWORD: r00t
+    volumes:
+      - evaluacion_data:/var/lib/mysql
+
+volumes:
+  evaluacion_data:
