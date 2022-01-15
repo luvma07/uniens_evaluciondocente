@@ -20,7 +20,7 @@ services:
     image: mariadb:10.3
     container_name: evaluacion-db
     ports:
-      - 3006:3006
+      - 3306:3306
     environment:
       MARIADB_DATABASE: evaluacion
       MARIADB_USER: eval-user
