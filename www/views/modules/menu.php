@@ -1,171 +1,132 @@
-<div class="body_menu">
-    <div class="conteiner_table_menu">
-        <div class="menu">
+<div class="conteiner-menu">
+    <div class="row g-0">
 
-            <div class="importante">
+        <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-sm-10 offset-sm-1 col-12" >
 
-                <h1>Estimado estudiante.</h1> 
+            <div class="row g-0 box-menu">
+                <div class="card g-0  card-menu">
 
-                <p>Se le recuerda que la información recaudada con esta pequeña encuesta se utilizará con la intención para poder mejorar nuestros servicios como institución de educación, así como hacer más confortable su estadía en nuestra UNIVERDAD DE ENSENADA. Por esta razón se le solicita que responda de la manera más sincera estos cuestionarios siendo completamente objetivo con sus respuestas y en el comentario final de cada cuestionario.</p>  
+                    <h1>Estimado estudiante <?php echo $user->getNombre() ?></h1> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>Este ejercicio se realiza con la intención de mejorar nuestros servicios como institución de educación. 
+                        Por esta razón se le solicita que responda de la manera más sincera estos cuestionarios siendo completamente 
+                        objetivos con la evaluación de cad auno de sus docentes.</p>
+                    <!--  
+                    <p>También se le informa que si no cuenta con el tiempo necesario para responder todos los cuestionarios 
+                        en una exhibición los cuestionarios se pueden enviar de manera individual por lo que se pueden hacer 
+                        pausas entre cuestionarios. </p>    
+                    -->
 
-                <p>También se le informa que si no cuenta con el tiempo necesario para responder todos los cuestionarios en una exhibición los cuestionarios se pueden enviar de manera individual por lo que se pueden hacer pausas entre cuestionarios. </p> 
-                <br>
-            </div>
+                    <?php 
+                        $turn = $user->getTurno(); 
+                        $grup = $user->getGrupo(); 
+                        $curse1 = $user->getIdcurso1(); 
+                        $curse2 = $user->getIdcurso2(); 
+                        $curse3 = $user->getIdcurso3(); 
 
-            <table class="tabla_menu" border="1">
-                <tr>
-                    <th align="center">No. de cuestionario</td>
-                    <th class="th-hidden" align="center">Evaluación</td>
-                    <th class="th-hidden" align="center">Docente</td>
-                    <th align="center">Status</td>
-                </tr>
+                        $curso1 = new user;
+                        $curso1->setCurse($curse1,$turn,$grup);
+     
+                        $curso2 = new user;
+                        $curso2->setCurse($curse2,$turn,$grup);
 
-                <?php
-
-                    $no_de_cuestionario = 0;
-
-                    if(isset($_COOKIE["curso_1"])){
-                        $no_de_cuestionario = $no_de_cuestionario + 1;
-                        $curso_1 = $_COOKIE["curso_1"];
-                        $docente_curso_1 = $_COOKIE["docente_curso1"];
-                        $status_curso_1 = $_COOKIE["status_curso1"];
-
-                        echo '<tr>
-                                <td align="center">'.$no_de_cuestionario.'</td>
-                                <td class="th-hidden" align="center">'.$curso_1.'</td>
-                                <td class="th-hidden" align="center">'.$docente_curso_1.'</td>';                
-
-                                if ($status_curso_1 == 1) {
-                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                    </tr>';
-                                } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD1.php">No ha sido respondido</a></td>
-                                    </tr>';
-                                }                
-                    }
-                
-                    if(isset($_COOKIE["curso_2"])){
-                        $no_de_cuestionario = $no_de_cuestionario + 1;
-                        $curso_2 = $_COOKIE["curso_2"];
-                        $docente_curso_2 = $_COOKIE["docente_curso2"];
-                        $status_curso_2 = $_COOKIE["status_curso2"];
-
-                        echo '<tr>
-                                <td align="center">'.$no_de_cuestionario.'</td>
-                                <td class="th-hidden" align="center">'.$curso_2.'</td>
-                                <td class="th-hidden" align="center">'.$docente_curso_2.'</td>';                
-
-                                if ($status_curso_2 == 1) {
-                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                    </tr>';
-                                } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD2.php">No ha sido respondido</a></td>
-                                    </tr>';
-                                }                
-                    }
-
-                    if(isset($_COOKIE["curso_3"])){
-                        $no_de_cuestionario = $no_de_cuestionario + 1;
-                        $curso_3 = $_COOKIE["curso_3"];
-                        $docente_curso_3 = $_COOKIE["docente_curso3"];
-                        $status_curso_3 = $_COOKIE["status_curso3"];
-
-                        echo '<tr>
-                                <td align="center">'.$no_de_cuestionario.'</td>
-                                <td class="th-hidden" align="center">'.$curso_3.'</td>
-                                <td class="th-hidden" align="center">'.$docente_curso_3.'</td>';                
-
-                                if ($status_curso_3 == 1) {
-                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                    </tr>';
-                                } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD3.php">No ha sido respondido</a></td>
-                                    </tr>';
-                                }                
-                    }
-
-                    //AGRE 
-                    /*
-                    if(isset($_COOKIE["curso_4"])){
-                        $no_de_cuestionario = $no_de_cuestionario + 1;
-                        $curso_4 = $_COOKIE["curso_4"];
-                        $docente_curso_4 = $_COOKIE["docente_curso4"];
-                        $status_curso_4 = $_COOKIE["status_curso4"];
-
-                        echo '<tr>
-                                <td align="center">'.$no_de_cuestionario.'</td>
-                                <td class="th-hidden" align="center">'.$curso_4.'</td>
-                                <td class="th-hidden" align="center">'.$docente_curso_4.'</td>';                
-
-                                if ($status_curso_4 == 1) {
-                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                    </tr>';
-                                } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD4.php">No ha sido respondido</a></td>
-                                    </tr>';
-                                }                
-                    }
-
-                    if(isset($_COOKIE["curso_5"])){
-                        $no_de_cuestionario = $no_de_cuestionario + 1;
-                        $curso_5 = $_COOKIE["curso_5"];
-                        $docente_curso_5 = $_COOKIE["docente_curso5"];
-                        $status_curso_5 = $_COOKIE["status_curso5"];
-
-                        echo '<tr>
-                                <td align="center">'.$no_de_cuestionario.'</td>
-                                <td class="th-hidden" align="center">'.$curso_5.'</td>
-                                <td class="th-hidden" align="center">'.$docente_curso_5.'</td>';                
-
-                                if ($status_curso_5 == 1) {
-                                    echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                    </tr>';
-                                } else {
-                                    echo '<td align="center"><a href="controllers/seleccionar_cuestionarioD5.php">No ha sido respondido</a></td>
-                                    </tr>';
-                                }                
-                    }
-                    */
-                    //
+                        $curso3 = new user;
+                        $curso3->setCurse($curse3,$turn,$grup);
+                    ?>
                     
-                    $no_de_cuestionario = $no_de_cuestionario + 1;
-                    $status_servicios = $_COOKIE["status_servicios"];
+                    <div class="card g-0  card-table">
+                        <?php
+                            echo '<div style="margin-botton: 5em;">Turno: '.$turn.'</div>';
+                            echo '<div style="margin-botton: 5em;">Grupo: '.$grup.'</div>';
+                        ?>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <table class="table table-bordered border-secondary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Curso</th>
+                                    <th scope="col">Docente</th>
+                                    <th scope="col">Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <?php
+                                        if($user->getIdcurso1() != ''){
+                                            echo '<td>'.$curso1->getCurso().'</td>';
+                                            echo '<td>'.$curso1->getDocente().'</td>';
+                                            echo '<td>';
+                                            if($user->getStatus1() == '1') {
+                                                echo '<button type="summit" class="btn btn-success">Respondido</button>';
+                                            } else {
+                                                echo '<form action="" method="get">
+                                                        <input type="hidden" value="curso1" name="num">
+                                                        <input type="hidden" value="'.$curso1->getCurso().'" name="curso">
+                                                        <input type="hidden" value="'.$curso1->getDocente().'" name="docente">
+                                                        <input type="hidden" value="'.$turn.'" name="turno">
+                                                        <input type="hidden" value="'.$grup.'" name="grupo">
+                                                        <button type="summit" class="btn btn-danger">Sin responder</button>
+                                                    </form>
+                                                ';
+                                            }
+                                            echo '</td>';
+                                        } 
+                                    ?>  
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <?php
+                                        if($user->getIdcurso2() != ''){
+                                            echo '<td>'.$curso2->getCurso().'</td>';
+                                            echo '<td>'.$curso2->getDocente().'</td>';
+                                            echo '<td>';
+                                            if($user->getStatus2() == '1') {
+                                                echo '<button type="summit" class="btn btn-success">Respondido</button>';
+                                            } else {
+                                                echo '<form action="" method="get">
+                                                        <input type="hidden" value="curso2" name="num">
+                                                        <input type="hidden" value="'.$curso2->getCurso().'" name="curso">
+                                                        <input type="hidden" value="'.$curso2->getDocente().'" name="docente">
+                                                        <input type="hidden" value="'.$turn.'" name="turno">
+                                                        <input type="hidden" value="'.$grup.'" name="grupo">
+                                                        <button type="summit" class="btn btn-danger">Sin responder</button>
+                                                    </form>
+                                                ';
+                                            }
+                                            echo '</td>';
+                                        } 
+                                    ?> 
+                                </tr>
+                                <tr>
+                                    <?php
+                                        if($user->getIdcurso3() != ''){
+                                            echo '<td>'.$curso3->getCurso().'</td>';
+                                            echo '<td>'.$curso3->getDocente().'</td>';
+                                            echo '<td>';
+                                            if($user->getStatus3() == '1') {
+                                                echo '<button type="summit" class="btn btn-success">Respondido</button>';
+                                            } else {
+                                                echo '<form action="" method="get">
+                                                        <input type="hidden" value="curso3" name="num">
+                                                        <input type="hidden" value="'.$curso3->getCurso().'" name="curso">
+                                                        <input type="hidden" value="'.$curso3->getDocente().'" name="docente">
+                                                        <input type="hidden" value="'.$turn.'" name="turno">
+                                                        <input type="hidden" value="'.$grup.'" name="grupo">
+                                                        <button type="summit" class="btn btn-danger">Sin responder</button>
+                                                    </form>
+                                                ';
+                                            }
+                                            echo '</td>';
+                                        } 
+                                    ?>   
+                                </tr>
+                            </tbody>
 
-                    echo '<tr>
-                            <td align="center">'.$no_de_cuestionario.'</td>
-                            <td class="th-hidden" align="center" colspan="2">Servicios</td>';                
+                        </table>
+                    </div>
 
-                            if ($status_servicios == 1) {
-                                echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                </tr>';
-                            } else {
-                                echo '<td align="center"><a href="controllers/seleccionar_cuestionarioS.php">No ha sido respondido</a></td>
-                                </tr>';
-                            } 
-/*
-                    $no_de_cuestionario = $no_de_cuestionario + 1;
-                    $status_instalaciones = $_COOKIE["status_instalaciones"];
-
-                    echo '<tr>
-                            <td align="center">'.$no_de_cuestionario.'</td>
-                            <td class="th-hidden" align="center" colspan="2">Instalaciones</td>';                
-
-                            if ($status_instalaciones == 1) {
-                                echo '<td align="center"><a href="controllers/aviso.controller.php">Respondido</a></td>
-                                </tr>';
-                            } else {
-                                echo '<td align="center"><a href="controllers/seleccionar_cuestionarioI.php">No ha sido respondido</a></td>
-                                </tr>';
-                            }                    
-*/
-                ?>
-
-            </table>
-
-            <form class="container_boton_cerrar_sesion" action="controllers/cerrar_sesion.php" method="post">
-                <p><input class="boton_cerrar_sesion" type="submit" value="Cerrar Sesión"></p>
-            </form>
-
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    

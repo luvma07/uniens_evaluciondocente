@@ -1,139 +1,83 @@
-/*
-.box_login{
-    background-image: url(../img/UniEns_wallpaper.png);
-    width: 100%;
-    height: 900px; 
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-asdasd
-}
-*/
-
-.body_menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*background-color: aqua;*/
-    background-image: url(../img/UniEns_wallpaper.png);
-    height: 100%; 
-    padding-top: 50px;
-    padding-bottom: 100px;
+.conteiner-menu {
+    min-height: 100%
 }
 
-.conteiner_table_menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 80%;
-    height: 80%;
-    border-radius: 30px;
-    opacity: 0.9;
-    padding-top: 50px;
-    padding-bottom: 25px;
+.box-menu {
+    width: inherit;
+    position: absolute;
+    top: 9em;
+
+    font-size: 1.25em;
 }
 
-.menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 0.5fr;
-    /*background-color:  #f4f6f6 ;*/
-    width: 80%;    
-    height: 80%;
+.card-menu {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 8em;
+    padding-right: 8em;
+    border-radius: 2em;
 }
 
-.importante {
-    grid-row-start: 1; 
-    grid-row-end: 2; 
+.card-table {
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
-.tabla_menu {
-    /*background-color: tomato;*/
-    background-color:  #f4f6f6 ;
-    grid-row-start: 2; 
-    grid-row-end: 3; 
-    width: 100%;    
-    height: 100%;
+@media only screen and (max-width: 1400px) {
+    .card-menu {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
 }
 
-.container_boton_cerrar_sesion {
-    /*background-color: violet;*/
-    grid-row-start: 3; 
-    grid-row-end: 4; 
-    width: 100%;    
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (max-width: 1071px) {
+    .card-table {
+        font-size: 0.95em;
+    }
+    .card-table {
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
 }
 
-.boton_cerrar_sesion {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*background-color: #12385B;
-    background-color: seagreen;*/
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    padding: 15px 32px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-
+@media only screen and (max-width: 992px) {
+    .card-menu {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    .card-table {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
-@media screen and (max-width: 650px) {
-
-    .body_menu  {
-        padding-top: 25px;
-        padding-bottom: 25px;
+@media only screen and (max-width: 992px) {
+    .card-table {
+        font-size: 0.85em;
     }
+}
 
-    .conteiner_table_menu {
-        width: 90%;
-        /*height: 90%;*/
+@media only screen and (max-width: 768px) {
+    .box-menu {
+        top: 13em;
     }
+    .card-menu {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+}
 
-    .menu {
-        grid-template-rows: 1fr 0.75fr 0.25fr;
-        width: 90%;    
-        /*height: 80%;*/
-        padding-top: 10x;
-        padding-bottom: 10pxpx;
+@media only screen and (max-width: 576px) {
+    .box-menu {
+        top: 12em;
     }
-
-    /*
-    .tabla_menu {
-        font-size: 16px; 
+    .card-menu {
+        border-radius: 0;
+    
     }
-    */
-
-    .th-hidden {
-        visibility: collapse;
-        font-size: 0px;
-    }
-
-    /*
-    .body_menu  {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-
-    .container_table_menu  {
-        width: 95%;
-        height: 95%;
-    }
-
-    .content_cuestionario {
-        width: 80%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-*/
 }

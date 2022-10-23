@@ -1,43 +1,51 @@
-<?php
+<div class="conteiner-login">
+    <div class="row g-0">        
 
-    echo '<script language="javascript">
-            alert("Por favor introduzca su nombre de usuario y contraseña correctamente dentro de los campos.");
-            </script>';
-    
-?>
+        <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-sm-8 offset-sm-2 col-10 offset-1" >
 
-<div class="box_login">
-    
-    <div class="form_container">
+            <div class="row g-0 box-login">
+                <div class="card g-0  card-login">
 
-        <div class="form_top"></div>
+                    <div class="row d-flexs justify-content-center align-items-center">
 
-        <div class="form_content">
-            
-            <div class="tittle">
-                <div class="text_tittle">
-                    Sistema de Evaluación Docente
+                        <div class="col d-none d-sm-none d-xxl-block d-xl-block d-lg-block d-lg-block">
+                            <img class="logo-vertical" src="views/resources/images/logo_UNIENS2.svg" alt="">
+                        </div>
+
+                        <div class="col d-flex flex-column">
+                            <!--
+                            <img class="logo-vertical d-block d-xxl-none d-xl-none d-lg-none" src="views/resources/images/logo_ITECI_vertical.jpg" alt="">
+                            -->
+                            <img class="logo-vertical d-block d-xxl-none d-xl-none d-lg-none" src="views/resources/images/logo_UNIENS2.svg" alt="">
+                            <form class="d-flex flex-column" action="" method="POST">
+                                <?php
+                                    if(isset($errorLogin)){
+                                        echo '<div class="errorLogin">'.$errorLogin.'</div>';
+                                    }
+                                ?>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">
+                                        Usuario
+                                    </label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+                                    <div id="emailHelp" class="form-text">
+                                        Utiliza tu número de control para ingresar al sistema.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">
+                                        Contraseña
+                                    </label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                                </div>
+                                <button type="submit" class="btn btn-secondary">Ingresar</button>
+                            </form>
+                        </div>
+                    </div>
+                        
                 </div>
             </div>
-            <div class="logo_login">
-                <img class="img_logologin" src="views/img/logo_login.jpg">
-            </div>
-            <div class="form">
-            
-                <form class="dates" action="controllers/login_user.controller.php" method="POST">
-                    <div class="date">
-                        <label class="label_login" for="name">Usuario UNIENS</label>
-                        <input class="input_login" type="text" name="log_user" required/>
-                    </div>
-                    <div class="date">
-                        <label class="label_login" for="password">Contraseña UNIENS </label>
-                        <input class="input_login" type="password" name="log_pass" required/>
-                    </div>
-                    <input class="boton_login" type="submit" value="Enviar" name="login" maxlength="21">
-                </form>            
-            </div>
         </div>
-        <div class="form_botton"></div>
-    </div>    
-</div>
 
+    </div>
+</div>

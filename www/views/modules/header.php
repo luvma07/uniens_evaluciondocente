@@ -1,36 +1,58 @@
-<?php
+<nav class="navbar fixed-top header-conteiner">
+        <div class="container-fluid">
 
-require_once 'controllers/connection.php';
-require_once 'controllers/scrip_EncodeDecode.php';
+            <a class="navbar-brand" href="../www/index.php">
+                <?php
+                    $prepa = false;
+                    if ($prepa) {
+                        echo '<img class="logo" src="../www/views/resources/images/logo_ITECI.svg" alt="">';
+                    } else {
+                        echo '<img class="logo" src="../www/views/resources/images/logo_UNIENS.svg" alt="">';
+                    }
+                ?>  
+            </a>
 
-$galleta1 = $_COOKIE["nombre_completo"]; 
+            <button class="navbar-toggler-custom d-block d-sm-block d-md-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <?php
+                    include '../www/views/resources/icons/menu_movil.svg';
+                ?>
+            </button>
 
-	if(isset($galleta1)){
-		$user_name = $galleta1;
-	} 
+            <?php
+                echo '<div class="app_name">Sistema de Evaluación Docente</div>';
+            ?>   
+             
+            <button class="navbar-toggler-custom d-none d-sm-none d-md-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <?php
+                    include '../www/views/resources/icons/menu_movil.svg';
+                ?>
+            </button>
 
-echo ' <div class="header">
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-            <div class="logo">
-                <img class="img_logo" src="views/img/UniEns_logo_1t_Blanco.png">
-            </div>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <?php
+                            echo 'Universidad de Ensenada';
+                        ?>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
 
-            <div class="user_card">
-                <div class="container">
-                    <div class="items">
-                        <img class="img_user" src="views/css/icons/account_circle.svg">
-                    </div>
-                    <div class="items">
-                        '.$user_name.'  
-                    </div>
-                    <div class="items">
-                        Estudiante
-                    </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Web ITECI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Web UNIENS</a>
+                    </li>
+                    -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../www/controllers/logout.php">Cerrar Sesión</a>
+                    </li>
                 </div>
             </div>
-
-            </div>  ';
-
-
-?>
-
+        </div>
+    </nav>

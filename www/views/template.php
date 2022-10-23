@@ -1,122 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Docente - ITECI</title>
 
-	<meta charset="UTF-8">
+    <link rel="stylesheet" href="../www/views/libs/bootstrap-5.0.2/bootstrap.min.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="title" content="UNIENS - Evaluacion Docente">
-	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam accusantium enim esse eos officiis sit officia">
-	<meta name="keyword" content="Lorem ipsum, dolor sit amet, consectetur, adipisicing, elit, Quisquam, accusantium, enim, esse">
+    <link rel="stylesheet" href="../www/views/css/body.css">
+    <link rel="stylesheet" href="../www/views/css/header.css">
+    <link rel="stylesheet" href="../www/views/css/footer.css">
 
-	<title>UNIENS - Evaluacion Docente</title>
+    <link rel="stylesheet" href="../www/views/css/assessment.css">
+    <link rel="stylesheet" href="../www/views/css/login.css">
+    <link rel="stylesheet" href="../www/views/css/menu.css">
 
-	<!-- HOJAS DE ESTILO PERSONALIZADAS -->
-
-	<link rel="stylesheet" href="views/css/login.css">
-
-	<link rel="stylesheet" href="views/css/header.css">
-
-	<link rel="stylesheet" href="views/css/menu.css">
-	<link rel="stylesheet" href="views/css/content.css">
-	<link rel="stylesheet" href="views/css/aviso.css">
-	<link rel="stylesheet" href="views/css/app.css">
-	<link rel="stylesheet" href="views/css/footer.css">
-
-	
 </head>
-
 <body>
+    <?php
+    
+        $userSession = new UserSession();
+        $user = new User();
 
-	<?php
+        if(isset($_SESSION['user'])) {
+            echo "Hay session";
+            $user->setUser($userSession->getCurrentUser());
+            
+            require_once 'modules/header.php';
 
-	/*
-	
-	utilizar tres documentos de control en la carputa controller 
-	para direccionar a tres enlases distintos a través de la página del menú.
-	
-	Estos documentos de control asignarán valores de manera automatica los 
-	cuales serán enviados a través del metodo post al documento de template
-	para manejar la páginación de los cuestionarios y de aviso a que un cuestinario 
-	ya ha sido respondido. 
-	
-	*/
+                if(isset($_GET['curso']) &&  isset($_GET['docente']) && isset($_GET['turno']) && isset($_GET['grupo'])) {
+                    require_once 'modules/assessment.php';
+                } else {
+                    include_once 'modules/menu.php';
+                }
+            
+        } else if(isset($_POST['username']) && isset($_POST['password'])) {
+            echo "Validación de Login";
+            
+            $userForm = $_POST['username'];
+            $passForm = $_POST['password'];
 
+            $user = new User();
 
-	require_once 'controllers/connection.php';
-	require_once 'controllers/scrip_EncodeDecode.php';
+            if($user->userExists($userForm, $passForm)){
+                //echo "Existe el usuario";
+                $userSession->setCurrentUser($userForm);
+                $user->setUser($userForm);
 
-	
-	if(isset($_COOKIE["paginacion"])){
-		//echo 'existe la cookie';
-		$paginacion = $_COOKIE["paginacion"];
-	} else {
-		$paginacion = 0;
-		//var_dump($paginacion);
-	}
-	
-	if ($paginacion == 0) {
-		//echo 'pagina de login';
-		require_once "modules/login.php";
-		require_once "modules/footer.php";
-	}
+                require_once 'modules/header.php';
+                include_once 'modules/menu.php';
+                
+            } else {
+                //echo "No existe el usuario";
+                $errorLogin = "Usuario y/o password incorrecto";
+                include_once 'modules/login.php';
+            }
+        } else {
+            //echo "Login";
+            require_once 'modules/login.php';
+        }
 
-	if ($paginacion == 1) {
-		//echo 'pagina de menu';
-		require_once "modules/header.php";
-		require_once "modules/menu.php";
-		require_once "modules/footer.php";
-	}
-
-	if ($paginacion == 2) {
-		//echo 'pagina de Evaluacion docente 1';
-		require_once "modules/header.php";
-		require_once "modules/content.php";
-		require_once "modules/footer.php";
-	}
-
-	if ($paginacion == 3) {
-		//echo 'pagina de Evaluacion docente 1';
-		require_once "modules/header.php";
-		require_once "modules/aviso.php";
-		require_once "modules/footer.php";
-	}
-
-	//echo 'Desde fuera';
-
-/*
-	$galleta1 = $_COOKIE["cookie1"]; 
-
-	if(isset($galleta1)){
-		$user_cookie = SED::decryption($galleta1);
-		//var_dump($user_cookie);
-	} 
-
-	$galleta2 = $_COOKIE["cookie2"]; 
-
-	if(isset($galleta1)){
-		$pass_cookie = SED::decryption($galleta2);
-		//var_dump($pass_cookie);
-	}
-
-	if(isset($user_cookie) && isset($pass_cookie)){
-
-		//paigna 1 Cuestionario
-		require_once "modules/header.php";
-		require_once "modules/menu.php";
-		//require_once "modules/content.php";
-
-	} else {
-
-		//pagina de login
-		require_once "modules/login.php";
-		require_once "modules/footer.php";
-
-	}
-*/
-	?>
-
-
-
+        require_once 'modules/footer.php';    
+    ?>
+    <script src="../www/views/libs/bootstrap-5.0.2/bootstrap.bundle.min.js"></script>
 </body>
 </html>

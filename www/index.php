@@ -1,10 +1,10 @@
 <?php
-require_once "controllers/connection.php";
-//require_once "controllers/scrip_EncodeDecode.php"
-//require_once "models/login_user.php";
+require_once "controllers/db.php";
+require_once "controllers/template.php";
 
-require_once "controllers/template.controller.php";
-require_once "controllers/login_user.controller.php";
+include_once 'controllers/user.php';
+include_once 'controllers/user_session.php';
 
-$plantilla = new TemplateController();
-$plantilla -> template();
+
+$template = new TemplateController();
+$template -> template();

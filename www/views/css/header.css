@@ -1,81 +1,63 @@
-body{
-    margin: 0;
+@import "conts.css";
+
+
+.header-conteiner {
+    /*background-color:white;*/
+    /*background-color: var(--grey2-ITECI);*/
+    background-color: #95B83A;
+    /*border-bottom: solid 1px var(--grey2-ITECI);*/
 }
 
-.header{
-    display: grid;
-    background-color: #12385B;
-    width: 100%;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    grid-template-columns: 120px 5fr 2fr;
+.logo {
+    width: 12em;
 }
 
-.logo{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 24px 0 24px;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.app_name {    
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    /*color: var(--grey-ITECI);*/
+    color: white;
+    position: relative;
+    top: -0.1em;
 }
 
-.img_logo{
-    max-width: 100%;
+svg {
+    fill: var(--blue-ITECI);
 }
 
-.user_card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    padding-right: 24px;
+.navbar-toggler-custom {
+    background-color: white;
 }
 
-.container{
-    display: inline-grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto auto;
-}
-
-.items{
-    color: #fff;
-}
-
-.items:nth-child(1){
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.img_user{
-    align-items: center;
-    justify-content: center;
-}
-
-.items:nth-child(2){
-    grid-row-start: 1;
-    grid-row-end: 2;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.items:nth-child(3){
-    grid-row-start: 2;
-    grid-row-end: 3;
-    font-style: italic;
-    font-size: 21px;
-}
-/*
-@media screen and (max-width: 1920px){
-    
-    .header{
-        grid-template-columns: 120px 1fr;
+@media only screen and (max-width: 1400px) {
+    .app_name {
+        font-size: 2.75em;
     }
+  }
 
+@media only screen and (max-width: 1200px) {
+    .app_name {
+        font-size: 2.5em;
+    }
 }
-*/
+
+@media only screen and (max-width: 992px) {
+    .app_name {
+        font-size: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .app_name {
+        font-size: 2.5em;
+        width: 100%;
+        text-align: center; 
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .app_name {
+        font-size: 2em;
+    }
+  }
