@@ -1,5 +1,5 @@
 # docker build --no-cache --tag ileonelperea/uniens-evaluaciondocente:1.0.0 . && docker push ileonelperea/uniens-evaluaciondocente:1.0.0
-FROM php:7.3-apache
+FROM php:8.1.6-apache
 
 # Install packages
 RUN apt-get update && apt-get install -y \
