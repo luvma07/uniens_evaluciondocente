@@ -1,0 +1,11 @@
+@import "conts.css";
+
+body {
+    /*background-image: url(./../resources/images/fondo_ITECI.svg);*/
+    background-image: url(./../resources/images/fondo_UNIENS.jpg);
+    background-attachment: fixed;
+}
+
+html, body {
+    height: 100%;
+}
