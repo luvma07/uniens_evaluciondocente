@@ -15,4 +15,7 @@ el archivo para la conexión a la base de datos se llama
 
 Otros specs:
 * Versión JSON 1.7.0
-* Versión PHP 7.3.29
+## Ojo: cambios en la versión PHP de 7.1.3 a 8.1.4:
+* Versión PHP 8.1.4
+
+* Usa bootstrap para responsive
