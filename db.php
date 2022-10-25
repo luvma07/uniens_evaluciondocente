@@ -15,6 +15,7 @@ class DB{
         $this->charset  = 'utf8mb4';
     }
 
+
     function connect(){
     
         try{
