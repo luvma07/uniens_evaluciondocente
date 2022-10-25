@@ -4,7 +4,7 @@ class TemplateController{
 
 	public function template(){
 		
-		include_once '../html/views/template.php';
+		include_once 'views/template.php';
 	}
 
 }
