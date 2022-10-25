@@ -45,7 +45,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Gets copied to /var/www/html/ on the container's initial startup
 COPY www /var/www/html
-COPY db.php /var/www/html/controllers/db.php
+COPY connection.php /var/www/html/controllers/connection.php
 COPY php.ini-production /usr/local/etc/php/php.ini
 
 RUN mkdir cookies
