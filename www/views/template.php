@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluación Docente - ITECI</title>
 
-    <link rel="stylesheet" href="../www/views/libs/bootstrap-5.0.2/bootstrap.min.css">
+    <link rel="stylesheet" href="../views/libs/bootstrap-5.0.2/bootstrap.min.css">
 
-    <link rel="stylesheet" href="../www/views/css/body.css">
-    <link rel="stylesheet" href="../www/views/css/header.css">
-    <link rel="stylesheet" href="../www/views/css/footer.css">
+    <link rel="stylesheet" href="../views/css/body.css">
+    <link rel="stylesheet" href="../views/css/header.css">
+    <link rel="stylesheet" href="../views/css/footer.css">
 
-    <link rel="stylesheet" href="../www/views/css/assessment.css">
-    <link rel="stylesheet" href="../www/views/css/login.css">
-    <link rel="stylesheet" href="../www/views/css/menu.css">
+    <link rel="stylesheet" href="../views/css/assessment.css">
+    <link rel="stylesheet" href="../views/css/login.css">
+    <link rel="stylesheet" href="../views/css/menu.css">
 
 </head>
 <body>
@@ -63,6 +63,6 @@
 
         require_once 'modules/footer.php';    
     ?>
-    <script src="../www/views/libs/bootstrap-5.0.2/bootstrap.bundle.min.js"></script>
+    <script src="../views/libs/bootstrap-5.0.2/bootstrap.bundle.min.js"></script>
 </body>
 </html>
