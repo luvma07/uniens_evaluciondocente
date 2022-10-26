@@ -16,7 +16,7 @@
             <button class="navbar-toggler-custom d-block d-sm-block d-md-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <?php
                     //include 'views/resources/icons/menu_movil.svg';
-                    include 'views/resources/icons/logout.svg';
+                    include '../views/resources/icons/logout.svg';
                 ?>
             </button>
                 </a>
@@ -29,7 +29,7 @@
             <button class="navbar-toggler-custom d-none d-sm-none d-md-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <?php
                     //include 'views/resources/icons/menu_movil.svg';
-                    include 'views/resources/icons/logout.svg';
+                    include '../views/resources/icons/logout.svg';
                 ?>
             </button>
                 </a>

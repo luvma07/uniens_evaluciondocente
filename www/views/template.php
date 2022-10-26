@@ -24,7 +24,6 @@
         $user = new User();
 
         if(isset($_SESSION['user'])) {
-            echo "Hay session";
             $user->setUser($userSession->getCurrentUser());
             
             require_once 'modules/header.php';
