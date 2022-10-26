@@ -7,7 +7,7 @@ services:
       - 8001:80
     environment:
       DB_HOST: db
-      DB_DB: evaluacion
+      DB_DB: evaluaciondocente
       DB_USER: eval-user
       DB_PASS: 3v4lu4c10n
     volumes:
@@ -22,7 +22,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MARIADB_DATABASE: evaluacion
+      MARIADB_DATABASE: evaluaciondocente
       MARIADB_USER: eval-user
       MARIADB_PASSWORD: 3v4lu4c10n
       MARIADB_ROOT_PASSWORD: r00t
