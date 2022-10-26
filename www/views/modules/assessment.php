@@ -3,7 +3,7 @@
     <div class="row g-0">
         <div class="col-xxl-8 offset-xxl-2 col-xl-12 col-lg-12 col-sm-12 col-12 five" >
             
-            <form action="../www/controllers/tabla_docentes.php" method="post">
+            <form action="../controllers/tabla_docentes.php" method="post">
 
                 <div class="row g-0 card-datos">
                     <div class="card g-0">
