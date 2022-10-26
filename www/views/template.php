@@ -59,9 +59,7 @@
         } else {
             //echo "Login";
 
-            require_once 'modules/assessment.php';
-
-            //require_once 'modules/login.php';
+            require_once 'modules/login.php';
         }
 
         require_once 'modules/footer.php';    

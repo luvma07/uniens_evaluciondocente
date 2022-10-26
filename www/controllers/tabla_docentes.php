@@ -10,7 +10,7 @@
     var_dump($status);
     echo '<br>';
 
-    $cuestionario = file_get_contents("../../views/json/preguntas.json");
+    $cuestionario = file_get_contents("../views/json/preguntas.json");
     $preguntas = json_decode($cuestionario, true);
 
     $enviar = []; 
@@ -27,6 +27,8 @@
 
     $enviar = json_encode($enviar);
     var_dump($enviar);
+
+    echo $enviar;
     
 
     /*ENVIAR A BASE DE DATOS*/
@@ -60,6 +62,6 @@
     $query = $db->connect()->prepare("UPDATE estudiantes SET $status=1 WHERE usuario=:usuario");
     $query->execute(['usuario' => $user->getUsuario()]);
 
-    //header("location: ../index.php");
+    header("location: ../index.php");
 
-    echo 'Hola desde tabla DOCENTES';
+ 

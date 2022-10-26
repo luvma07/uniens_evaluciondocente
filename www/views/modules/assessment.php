@@ -31,7 +31,7 @@
                 </div>
 
                 <?php
-                $cuestionario = @file_get_contents("../www/views/json/preguntas.json");
+                $cuestionario = @file_get_contents("views/json/preguntas.json");
                 $preguntas = json_decode($cuestionario, true);
 
                 echo '<br><br>';
