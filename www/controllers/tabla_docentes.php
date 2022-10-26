@@ -60,4 +60,6 @@
     $query = $db->connect()->prepare("UPDATE estudiantes SET $status=1 WHERE usuario=:usuario");
     $query->execute(['usuario' => $user->getUsuario()]);
 
-    header("location: ../index.php");
+    //header("location: ../index.php");
+
+    echo 'Hola desde tabla DOCENTES';

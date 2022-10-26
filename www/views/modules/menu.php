@@ -124,6 +124,8 @@
                         </table>
                     </div>
 
+                    <a class="nav-link" href="../controllers/logout.php">Cerrar Sesión</a>
+
                 </div>
             </div>
         </div>
