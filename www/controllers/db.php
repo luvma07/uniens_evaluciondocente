@@ -13,7 +13,7 @@ class DB{
         $this->db       = getenv('DB_DB');
         $this->user     = getenv('DB_USER');
         $this->password = getenv('DB_PASS');
-        //$this->charset  = 'utf8mb4';
+        $this->charset  = 'utf8mb4';
     }
 
     function connect(){
