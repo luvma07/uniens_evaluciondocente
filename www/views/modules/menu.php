@@ -10,7 +10,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <p>Este ejercicio se realiza con la intención de mejorar nuestros servicios como institución de educación. 
                         Por esta razón se le solicita que responda de la manera más sincera estos cuestionarios siendo completamente 
-                        objetivos con la evaluación de cad auno de sus docentes.</p>
+                        objetivos con la evaluación de cada uno de sus docentes.</p>
                     <!--  
                     <p>También se le informa que si no cuenta con el tiempo necesario para responder todos los cuestionarios 
                         en una exhibición los cuestionarios se pueden enviar de manera individual por lo que se pueden hacer 
