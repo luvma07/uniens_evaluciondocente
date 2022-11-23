@@ -567,7 +567,7 @@ CREATE TABLE IF NOT EXISTS `docentes` (
   PRIMARY KEY (`id_docentes`)
 ) ENGINE=InnoDB AUTO_INCREMENT=173 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla evaluaciondocente.docentes: ~155 rows (aproximadamente)
+-- Volcando datos para la tabla evaluaciondocente.docentes: ~170 rows (aproximadamente)
 INSERT INTO `docentes` (`id_docentes`, `Docente`, `curso`, `Cuestionario_resuelto`) VALUES
 	(3, 'MOISES ALFONSO GOMEZ DEL RIO', 'ECONOMÍA INTERNACIONAL', '{"Pregunta1":"siempre","Pregunta2":"siempre","Pregunta3":"casi siempre","Pregunta4":"casi siempre","Pregunta5":"algunas veces","Pregunta6":"nunca","Pregunta7":"algunas veces","Pregunta8":"algunas veces","Pregunta9":"siempre","Pregunta10":"siempre","Pregunta11":"siempre","Pregunta12":"algunas veces","Pregunta13":"siempre","Pregunta14":"casi siempre","comentario":"Siento que le hizo falta hacer algo pr\\u00e1ctico pero todo qued\\u00f3 claro "}'),
 	(4, 'OLGA GOMEZ GONZALEZ', 'ADMINISTRACIÓN DE MERCADOTECNIA ', '{"Pregunta1":"siempre","Pregunta2":"siempre","Pregunta3":"siempre","Pregunta4":"siempre","Pregunta5":"siempre","Pregunta6":"siempre","Pregunta7":"siempre","Pregunta8":"siempre","Pregunta9":"siempre","Pregunta10":"siempre","Pregunta11":"siempre","Pregunta12":"casi siempre","Pregunta13":"siempre","Pregunta14":"casi siempre","comentario":"Me gusta como trabaja la maestra"}'),
