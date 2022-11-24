@@ -30,6 +30,8 @@ class User extends DB{
             $this->nombre_completo = $currentUser['nombre_completo'];
             $this->turno = $currentUser['turno'];
             $this->grupo = $currentUser['grupo'];
+
+            $this->campus = $currentUser['campus'];
             
 
             $this->status_curso1 = $currentUser['status_curso1'];
@@ -43,9 +45,9 @@ class User extends DB{
         }
     }
 
-    public function setCurse($curse, $turn, $grup){
-        $query = $this->connect()->prepare('SELECT * FROM cursos WHERE clave_curso = :curse AND turno = :turn AND grupo = :grup');
-        $query->execute(['curse' => $curse, 'turn' => $turn, 'grup' => $grup]);
+    public function setCurse($curse, $turn, $grup, $campus){
+        $query = $this->connect()->prepare('SELECT * FROM cursos WHERE clave_curso = :curse AND turno = :turn AND grupo = :grup AND campus = :campus' );
+        $query->execute(['curse' => $curse, 'turn' => $turn, 'grup' => $grup, 'campus' => $campus]);
         
         foreach ($query as $currentUser) {
             $this->curso = $currentUser['curso'];
@@ -80,6 +82,10 @@ class User extends DB{
 
     public function getGrupo(){
         return $this->grupo;
+    }
+
+    public function getCampus(){
+        return $this->campus;
     }
 
     public function getStatus1(){

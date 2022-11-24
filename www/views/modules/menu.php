@@ -20,24 +20,28 @@
                     <?php 
                         $turn = $user->getTurno(); 
                         $grup = $user->getGrupo(); 
+
+                        $campus = $user->getCampus();
+
                         $curse1 = $user->getIdcurso1(); 
                         $curse2 = $user->getIdcurso2(); 
                         $curse3 = $user->getIdcurso3(); 
 
                         $curso1 = new user;
-                        $curso1->setCurse($curse1,$turn,$grup);
+                        $curso1->setCurse($curse1,$turn,$grup, $campus);
      
                         $curso2 = new user;
-                        $curso2->setCurse($curse2,$turn,$grup);
+                        $curso2->setCurse($curse2,$turn,$grup, $campus);
 
                         $curso3 = new user;
-                        $curso3->setCurse($curse3,$turn,$grup);
+                        $curso3->setCurse($curse3,$turn,$grup, $campus);
                     ?>
                     
                     <div class="card g-0  card-table">
                         <?php
                             echo '<div style="margin-botton: 5em;">Turno: '.$turn.'</div>';
                             echo '<div style="margin-botton: 5em;">Grupo: '.$grup.'</div>';
+                            echo '<div style="margin-botton: 5em;">Campus: '.$campus.'</div>';
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <table class="table table-bordered border-secondary">
