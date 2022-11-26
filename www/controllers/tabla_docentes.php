@@ -52,7 +52,11 @@
     } else if($status == 'curso2') {
         $status = 'status_curso2';
     } else if($status == 'curso3') {
+        $status = 'status_curso3';
+    } else if($status == 'curso4') {
         $status = 'status_curso4';
+    } else if($status == 'curso5') {
+        $status = 'status_curso5';
     }
 
     $user->setUser($userSession->getCurrentUser());
